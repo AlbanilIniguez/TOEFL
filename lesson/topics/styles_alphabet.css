@@ -1,0 +1,107 @@
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #fafafa;
+    }
+
+    header {
+      background-color: #1e88e5;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .alphabet-main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+      max-width: 1200px;
+      margin: auto;
+      box-sizing: border-box;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      color: white;
+      height: 120px;
+      text-align: center;
+      transition: transform 0.2s;
+      word-break: break-word;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .letters {
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+
+    .pronunciation {
+      font-size: 1rem;
+    }
+
+    .color-a  { background: #c82a54; }
+    .color-b  { background: #ef280f; }
+    .color-c  { background: #e36b2c; }
+    .color-d  { background: #6dc36d; }
+    .color-e  { background: #f36f6f; }
+    .color-f  { background: #109dfa; }
+    .color-g  { background: #300105; }
+    .color-h  { background: #8e24aa; }
+    .color-i  { background: #024a86; }
+    .color-j  { background: #ffa500; }
+    .color-k  { background: #4caf50; }
+    .color-l  { background: #ff69b4; }
+    .color-m  { background: #9c27b0; }
+    .color-n  { background: #3f51b5; }
+    .color-o  { background: #00bcd4; }
+    .color-p  { background: #009688; }
+    .color-q  { background: #ff5722; }
+    .color-r  { background: #795548; }
+    .color-s  { background: #607d8b; }
+    .color-t  { background: #8bc34a; }
+    .color-u  { background: #e91e63; }
+    .color-v  { background: #673ab7; }
+    .color-w  { background: #2196f3; }
+    .color-x  { background: #ffc107; }
+    .color-y  { background: #ff9800; }
+    .color-z  { background: #f44336; }
+
+    @media (max-width: 768px) {
+      .card {
+        height: 100px;
+        font-size: 1rem;
+      }
+      .letters {
+        font-size: 1.3rem;
+      }
+      .pronunciation {
+        font-size: 0.9rem;
+      }
+    }
+
+    .back-button {
+      text-align: right;
+      margin: 2rem 1rem;
+    }
+
+    .back-button a {
+      color: #1e88e5;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .back-button a:hover {
+      text-decoration: underline;
+    }
+  

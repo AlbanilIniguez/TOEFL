@@ -1,0 +1,72 @@
+body {
+  background-color: #f0f5ff;
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #4F46E5;
+  font-weight: 700;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  animation: fadeInUp 0.5s ease both;
+}
+
+/* Tarjeta tipo cartoon */
+a {
+  display: block;
+  background-color: white;
+  border: 3px solid #4F46E5;
+  border-radius: 20px;
+  padding: 1rem;
+  text-align: center;
+  color: #4F46E5;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+a:hover {
+  background-color: #EEF2FF;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+}
+
+/* Animación para entrada */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.back-button {
+  text-align: center; /* El contenedor centra su contenido */
+}
+
+.back-button a {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  display: inline-block;
+  color: #1e88e5;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.back-button a:hover {
+  text-decoration: underline;
+}

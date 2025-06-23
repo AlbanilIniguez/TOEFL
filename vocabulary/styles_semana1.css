@@ -1,0 +1,83 @@
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background-color: #ebf4ff;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Contenedor con ancho 100% para que no se corte */
+    #pdf-content {
+      background: white;
+      padding: 20px;
+      box-sizing: border-box;
+      color: #2d3748;
+      /* Quitar ancho fijo para que html2pdf adapte */
+      max-width: 11.69in; /* A4 horizontal max ancho */
+      width: 100%;
+      overflow: visible !important;
+    }
+
+    h1, h2 {
+      color: #434190;
+      margin-bottom: 20px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      page-break-inside: avoid !important;
+    }
+    thead {
+      display: table-header-group;
+    }
+    tbody {
+      display: table-row-group;
+    }
+    tr {
+      page-break-inside: avoid !important;
+      page-break-after: auto !important;
+    }
+
+    table, th, td {
+      border: 1px solid #5a67d8;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+      vertical-align: middle;
+      white-space: nowrap; /* Evitar que el texto se quiebre y ensanche las celdas */
+    }
+    th {
+      background-color: #c3dafe;
+      color: #434190;
+    }
+    tr:hover {
+      background-color: #ebf4ff;
+    }
+
+    .expressions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+      font-size: 14px;
+    }
+
+    .back-link {
+      text-align: right;
+      margin: 20px 20px 0 0;
+      font-size: 14px;
+    }
+    .back-link a {
+      color: #5a67d8;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+    @media print {
+      .back-link {
+        display: none !important;
+      }
+    }

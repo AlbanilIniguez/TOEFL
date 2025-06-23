@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AprendeInglés - TOEFL Nivel Básico</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-blue-50">
+  <!-- Sidebar Navigation -->
+  <div id="sidebar" class="fixed inset-y-0 left-0 w-64 bg-indigo-700 text-white transform -translate-x-full transition-transform duration-300 ease-in-out z-30 md:translate-x-0">
+    <div class="p-6">
+      <div class="flex items-center justify-between">
+        <h2 class="text-2xl font-bold">Aprende Inglés</h2>
+        <button id="close-sidebar" class="md:hidden text-white">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="mt-10 space-y-4">
+        <a href="javascript:void(0)" class="nav-link block py-2.5 px-4 rounded transition duration-200 hover:bg-indigo-800" data-target="home">
+          <i class="fas fa-home mr-2"></i> Inicio
+        </a>
+        <a href="javascript:void(0)" class="nav-link block py-2.5 px-4 rounded transition duration-200 hover:bg-indigo-800" data-target="lessons">
+          <i class="fas fa-book-open mr-2"></i> Lecciones Temáticas
+        </a>
+        <a href="javascript:void(0)" class="nav-link block py-2.5 px-4 rounded transition duration-200 hover:bg-indigo-800" data-target="quizzes">
+          <i class="fas fa-question-circle mr-2"></i> Quizzes Interactivos
+        </a>
+        <a href="javascript:void(0)" class="nav-link block py-2.5 px-4 rounded transition duration-200 hover:bg-indigo-800" data-target="puzzles">
+          <i class="fas fa-puzzle-piece mr-2"></i> Puzzles/Rebuses
+        </a>
+        <a href="javascript:void(0)" class="nav-link block py-2.5 px-4 rounded transition duration-200 hover:bg-indigo-800" data-target="progress">
+          <i class="fas fa-chart-line mr-2"></i> Progreso
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div id="main-content" class="md:ml-64 min-h-screen transition-all duration-300 ease-in-out">
+    <!-- Mobile Header -->
+    <div class="md:hidden bg-indigo-700 text-white p-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold">AprendeInglés</h1>
+      <button id="open-sidebar" class="text-white">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Content Sections -->
+    <div class="container mx-auto px-4 py-6">
+      <!-- Home Section -->
+      <div id="home" class="content-section">
+        <h1 class="text-3xl font-bold text-indigo-800 mb-8">¡Bienvenido a AprendeInglés!</h1>
+        <p class="text-lg mb-8">Selecciona una de nuestras secciones para comenzar tu aprendizaje:</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Lecciones Temáticas Card -->
+          <div class="cartoon-card card-shadow bg-white rounded-xl overflow-hidden">
+            <div class="p-6">
+              <h3 class="section-header lessons-icon text-xl font-bold text-indigo-700 mb-4">Lecciones Temáticas</h3>
+              <p class="text-gray-600 mb-4">Aprende vocabulario, gramática y expresiones con lecciones interactivas.</p>
+              <button class="nav-link w-full py-2 px-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition duration-300 bounce" data-target="lessons">
+                Comenzar <i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Quizzes Interactivos Card -->
+          <div class="cartoon-card card-shadow bg-white rounded-xl overflow-hidden">
+            <div class="p-6">
+              <h3 class="section-header quiz-icon text-xl font-bold text-indigo-700 mb-4">Quizzes Interactivos</h3>
+              <p class="text-gray-600 mb-4">Pon a prueba tus conocimientos con nuestros quizzes interactivos.</p>
+              <button class="nav-link w-full py-2 px-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition duration-300 bounce" data-target="quizzes">
+                Comenzar <i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Puzzles/Rebuses Card -->
+          <div class="cartoon-card card-shadow bg-white rounded-xl overflow-hidden">
+            <div class="p-6">
+              <h3 class="section-header puzzle-icon text-xl font-bold text-indigo-700 mb-4">Puzzles/Rebuses</h3>
+              <p class="text-gray-600 mb-4">Diviértete con juegos interactivos mientras aprendes inglés.</p>
+              <button class="nav-link w-full py-2 px-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition duration-300 bounce" data-target="puzzles">
+                Comenzar <i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Progreso Card -->
+          <div class="cartoon-card card-shadow bg-white rounded-xl overflow-hidden">
+            <div class="p-6">
+              <h3 class="section-header progress-icon text-xl font-bold text-indigo-700 mb-4">Progreso</h3>
+              <p class="text-gray-600 mb-4">Visualiza tu avance en el aprendizaje y tus resultados.</p>
+              <button class="nav-link w-full py-2 px-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition duration-300 bounce" data-target="progress">
+                Ver Progreso <i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Lecciones Section -->
+      <div id="lessons" class="content-section hidden">
+        <h1 class="text-3xl font-bold text-indigo-800 mb-8">Lecciones</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+          <!-- Gramática -->
+          <div class="cartoon-card card-shadow bg-white rounded-xl overflow-hidden slide-in" style="animation-delay: 0.1s">
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-indigo-700 mb-4">Temario</h3>
+              <p class="text-gray-600 mb-4">Comprende las reglas básicas de la gramática inglesa.</p>
+              <a href="lesson/lecciones.html" class="block text-center w-full py-2 px-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition duration-300">
+                  Iniciar Lección <i class="fas fa-play ml-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Vocabulario -->
+          <div class="cartoon-card card-shadow bg-white rounded-xl overflow-hidden slide-in">
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-indigo-700 mb-4">Vocabulario</h3>
+              <p class="text-gray-600 mb-4">Aprende palabras esenciales para comunicarte en inglés.</p>
+              <a href="/vocabulary/vocabulario.html" class="block text-center w-full py-2 px-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition duration-300">
+                  Iniciar Lección <i class="fas fa-play ml-2"></i>
+              </a>
+
+
+            </div>
+          </div>
+          
+          <!-- Expresiones -->
+          <div class="cartoon-card card-shadow bg-white rounded-xl overflow-hidden slide-in" style="animation-delay: 0.2s">
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-indigo-700 mb-4">Expresiones</h3>
+              <p class="text-gray-600 mb-4">Aprende frases y expresiones comunes en inglés.</p>
+              <button class="w-full py-2 px-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition duration-300">
+                Iniciar Lección <i class="fas fa-play ml-2"></i>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Comprensión -->
+          <div class="cartoon-card card-shadow bg-white rounded-xl overflow-hidden slide-in" style="animation-delay: 0.3s">
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-indigo-700 mb-4">Comprensión</h3>
+              <p class="text-gray-600 mb-4">Mejora tu comprensión lectora y auditiva en inglés.</p>
+              <button class="w-full py-2 px-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition duration-300">
+                Iniciar Lección <i class="fas fa-play ml-2"></i>
+              </button>
+            </div>
+          </div>
+        </div>     
+    </div>
+  </div>
+
+   <script src="script.js"></script>
+</body>
+</html>
